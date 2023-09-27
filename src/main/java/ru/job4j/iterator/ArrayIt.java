@@ -18,5 +18,5 @@ public class ArrayIt implements Iterator<Integer> {
     @Override
     public Integer next() {
         return data[point++];
-    }
+     }
 }
