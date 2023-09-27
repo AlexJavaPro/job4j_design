@@ -23,6 +23,7 @@
       <version>5.10.0</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
@@ -41,6 +42,7 @@
           <skipTests>false</skipTests>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -52,6 +54,7 @@
           <failsOnError>true</failsOnError>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
         </configuration>
+
         <dependencies>
           <dependency>
             <groupId>com.puppycrawl.tools</groupId>
