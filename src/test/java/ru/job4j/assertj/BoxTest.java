@@ -75,7 +75,7 @@ class BoxTest {
     }
 
     @Test
-    void whenVertex8Edge7Then294() {
+    void whenVertex8Edge7ThenArea294() {
         Box box = new Box(8, 7);
         double area = box.getArea();
         assertThat(area).isEqualTo(294d, withPrecision(0.1d))
@@ -93,5 +93,37 @@ class BoxTest {
         assertThat(exit)
                 .isFalse()
                 .isEqualTo(false);
+    }
+
+    @Test
+    void notIsExit() {
+        Box box = new Box(8, 2);
+        boolean exit = box.isExist();
+        assertThat(exit)
+                .isTrue()
+                .isEqualTo(true);
+    }
+
+    @Test
+    void whenVertex8Edge7ThenGetNumberOfVertices8() {
+        Box box = new Box(8, 7);
+        int result = box.getNumberOfVertices();
+        assertThat(result).isPositive()
+                .isGreaterThan(7)
+                .isLessThan(9)
+                .isNotZero()
+                .isEqualTo(8);
+    }
+
+    @Test
+     void whenVertex4EdgeMinus2ThenGetNumberOfVerticesMinus1() {
+        Box box = new Box(4, -2);
+        int result = box.getNumberOfVertices();
+        assertThat(result)
+                .isNegative()
+                .isNotZero()
+                .isLessThan(0)
+                .isGreaterThan(-2)
+                .isEqualTo(-1);
     }
 }
