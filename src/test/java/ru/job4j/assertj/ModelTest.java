@@ -39,5 +39,5 @@ class ModelTest {
                 .isGreaterThan(1)
                 .isLessThan(3)
                 .isEqualTo(2);
-    }
+     }
 }
