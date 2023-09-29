@@ -57,4 +57,4 @@ class SimpleConvertTest {
                 .doesNotContainValue(6)
                 .containsEntry("zero", 0);
     }
-}
+ }
