@@ -15,7 +15,7 @@ class NameLoadTest {
     @Test
     void checkNotContainTheSymbolEqually() {
         NameLoad nameLoad = new NameLoad();
-        assertThatThrownBy(() -> nameLoad.parse("key value","key1 value2"))
+        assertThatThrownBy(() -> nameLoad.parse("key value", "key1 value2"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("not contain the symbol");
     }
@@ -43,5 +43,4 @@ class NameLoadTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("not contain a value");
     }
-
 }
