@@ -9,7 +9,7 @@ public class Balancer {
         int i = 0;
         while (source.hasNext() && !nodes.isEmpty()) {
             i = i < nodes.size() ? i : 0;
-           nodes.get(i++).add(source.next());
+            nodes.get(i++).add(source.next());
         }
     }
 }
