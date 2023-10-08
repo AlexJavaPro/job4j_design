@@ -33,6 +33,18 @@ public class SimpleLinkedList<E> implements SimpleLinked<E> {
         return node.item;
     }
 
+    public E deleteFirst() {
+        E element = null;
+        if (head != null) {
+            element = head.item;
+            Node<E> buf = head;
+            head = head.next;
+            buf.item = null;
+            buf.next = null;
+        }
+       return element;
+    }
+
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
