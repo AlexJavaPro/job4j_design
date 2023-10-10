@@ -8,7 +8,7 @@ import java.util.Objects;
 public class ForwardLinked<T> implements Iterable<T> {
     private int modCount;
     private ForwardLinked.Node<T> head;
-    int size;
+    private int size;
 
     public void add(T value) {
         size++;
@@ -44,7 +44,6 @@ public class ForwardLinked<T> implements Iterable<T> {
         buf.item = null;
         buf.next = null;
         size--;
-        modCount--;
         return element;
     }
 
